@@ -11,8 +11,7 @@ async def colorize_image_endpoint(file: UploadFile = File(...)):
     try:
         # Read the uploaded image file
         image_bytes = await file.read()
-        print(image_bytes)
-
+        # print(image_bytes)
         # Open the image from the uploaded bytes and convert to RGB
         image = Image.open(BytesIO(image_bytes)).convert("RGB")
 
